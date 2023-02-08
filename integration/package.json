@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js"
+    "test": "cross-env NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js",
+    "test:watch": "cross-env NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js  --watch",
   },
   "keywords": [],
   "author": "",
