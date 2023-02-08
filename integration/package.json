@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js",
     "test:watch": "cross-env NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js  --watch",
+    "test:cov": "cross-env NODE_ENV=test nyc --reported=lcov --reported=text npm run test"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "mongodb": "^3.3.2"
+    "mongodb": "^3.3.2",
+    "nyc": "^15.1.0"
   }
 }
