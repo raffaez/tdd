@@ -26,7 +26,7 @@ describe('isAnagram - basic functionality', () => {
 
   it('returns true when the strings have spaces', () => {
     const expected = true;
-    const actual = isAnagram('conversation', 'voices ranton');
+    const actual = isAnagram('conversation', 'voices rant on');
     expect(actual).to.equal(expected);
   });
 
