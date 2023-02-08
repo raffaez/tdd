@@ -44,4 +44,12 @@ describe("GET /users/:username", () => {
 
     stub.restore();
   });
+
+  it("returns 404 when the user is not found", async () => {
+    const stub = sinon.stub(db, "getUserByUsername").resolves(null);
+
+    await request(app).get("/users/invalid").expect(404);
+
+    stub.restore();
+  });
 });
